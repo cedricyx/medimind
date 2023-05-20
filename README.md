@@ -3,11 +3,10 @@
 HCI Project Work 2023 by Group 9-03
 
 Cedric Phua (2A3)
-
 Asher Ang (2A3)
-
 Fu Zixuan (2A3) 
 
+PROBLEM STATEMENT
 
 “Elderly struggle with medication management.”
 
