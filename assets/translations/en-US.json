@@ -1,0 +1,21 @@
+{
+    "title" : "Medimind",
+
+    "navComment" : "---------------------------------Navigation Menu ------------------------------",
+    "home" : "Home",
+    "addmedicine" : "Add Medicine",
+    "profile" : "Profile",  
+    "setting" : "Setting",  
+
+
+    "settingComment" : "---------------------------------Setting Menu ------------------------------",
+    "notification": "Notification",
+    "language": "Language",
+    "english" : "English" ,
+    "chinese" : "Chinese" ,
+
+
+
+    "endOfList": "--------------------------------------endOfList------------------------------------ "
+ 
+}

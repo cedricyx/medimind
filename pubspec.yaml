@@ -1,0 +1,30 @@
+name: medimind
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=2.19.2 <3.0.0'
+
+dependencies:
+  flutter_native_splash: ^2.2.19
+  easy_localization: ^3.0.1
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  assets:
+    - assets/images/
+    - assets/translations/
+  uses-material-design: true
+
+flutter_native_splash:
+  color: "#ffffff"
+  colour_dark: "#ffffff"
+  image: assets/images/logo.png
+  branding: assets/images/brand.png
