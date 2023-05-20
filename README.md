@@ -10,7 +10,7 @@ PROBLEM STATEMENT
 
 “Elderly struggle with medication management.”
 
-Testing HCI COmmit 
+Commit to Master 
 
 OUR OBJECTIVES
 
