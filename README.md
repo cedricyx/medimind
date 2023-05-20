@@ -11,7 +11,7 @@ Fu Zixuan (2A3)
 
 “Elderly struggle with medication management.”
 
-Tetsing
+Testing HCI COmmit 
 
 OUR OBJECTIVES
 
