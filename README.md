@@ -7,6 +7,8 @@ Fu Zixuan (2A3)
 
 “Elderly struggle with medication management.”
 
+Tetsing
+
 OUR OBJECTIVES
 Make a medication reminder mobile app which will...
 
