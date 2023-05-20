@@ -10,6 +10,8 @@ PROBLEM STATEMENT
 
 “Elderly struggle with medication management.”
 
+Commit to Master 
+
 OUR OBJECTIVES
 
 Make a medication reminder mobile app which will...
