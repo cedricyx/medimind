@@ -5,6 +5,8 @@ Cedric Phua (2A3)
 Asher Ang (2A3)
 Fu Zixuan (2A3) 
 
+“Elderly struggle with medication management.”
+
 OUR OBJECTIVES
 Make a medication reminder mobile app which will...
 
