@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:medimind/pages/calendar.dart';
 import 'package:calendar_timeline/calendar_timeline.dart';
 import 'package:easy_localization/easy_localization.dart';
 
