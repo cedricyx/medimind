@@ -71,11 +71,18 @@ class _BottomNavigationExampleState extends State {
   _changeTab(int index) {
     setState(() {
       _selectedTab = index;
-      if (_selectedTab == 0) _selectedTabName = "home".tr();
-      if (_selectedTab == 1) _selectedTabName = "addmedicine".tr();
-      if (_selectedTab == 2) _selectedTabName = "profile".tr();
-      if (_selectedTab == 3) _selectedTabName = "setting".tr();
-      
+      if (_selectedTab == 0) {
+        _selectedTabName =  "home".tr();
+      }
+      if (_selectedTab == 1) {
+        _selectedTabName =  "addmedicine".tr();
+      }
+      if (_selectedTab == 2) {
+        _selectedTabName =  "profile".tr();
+      }
+      if (_selectedTab == 3) {
+        _selectedTabName =  "setting".tr();
+      }      
     });
   }
 
