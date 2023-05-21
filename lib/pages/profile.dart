@@ -36,6 +36,7 @@ class _ProfileState extends State<Profile> {
                           blurRadius: 10.0,
                           offset: Offset(0.00, 10.0))
                     ]),
+                    //start here
               )
             ]),
           ],
