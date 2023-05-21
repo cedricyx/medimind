@@ -1,20 +1,41 @@
 {
     "title" : "Medimind",
 
-    "navComment" : "---------------------------------Navigation Menu ------------------------------",
+    "navComment" : "-------------------------Common and Navigation Menu ------------------------------",
     "home" : "Home",
     "addmedicine" : "Add Medicine",
     "profile" : "Profile",  
     "setting" : "Setting",  
+    "done" : "Done",
 
+    "HomeComment" : "---------------------------------Home Menu ------------------------------",
+    "today" : "Today's Medicine",
+    "calendar" : "Calendar",
+    "viewall" : "View All",
+
+    "AddMedComment" : "---------------------------------Add Medicine Menu ------------------------------",
+    "name" : "Name",
+    "dosage" : "Dosage",
+    "time" : "Time",
+    "duration" : "Duration",
+    "visualaids" : "Visual Aids",
+
+    "profileComment" : "---------------------------------Profile Menu ------------------------------",
+    "firstname": "First Name",
+    "lastname": "Last Name",
+    "email" : "Email" ,
+    "mobile" : "Mobile Number" ,
+    "editprofile" : "Edit Profile" ,
 
     "settingComment" : "---------------------------------Setting Menu ------------------------------",
-    "notification": "Notification",
     "language": "Language",
     "english" : "English" ,
     "chinese" : "Chinese" ,
-
-
+    "languageDesc" : "Support English, Chinese, Malay, etc",
+    "notification": "Notification",
+    "notificationDesc": "Support sound and vibration",
+    "sound": "Sound",
+    "vibration": "Vibration",  
 
     "endOfList": "--------------------------------------endOfList------------------------------------ "
  

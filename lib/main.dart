@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
+        //theme: ThemeData(useMaterial3: true),
         home: BottomNavigationExample());
   }
 }
@@ -35,9 +36,6 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     context.setLocale(Locale('zh', 'SG'));
     return Scaffold(
-      appBar: AppBar(
-        title: Text('My App'),
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -50,6 +48,7 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
+
 class BottomNavigationExample extends StatefulWidget {
   const BottomNavigationExample({Key? key}) : super(key: key);
 
@@ -60,6 +59,7 @@ class BottomNavigationExample extends StatefulWidget {
 
 class _BottomNavigationExampleState extends State {
   int _selectedTab = 0;
+  var _selectedTabName =  "home".tr();
 
   List _pages = [
     Home(),
@@ -71,31 +71,52 @@ class _BottomNavigationExampleState extends State {
   _changeTab(int index) {
     setState(() {
       _selectedTab = index;
+      if (_selectedTab == 0) _selectedTabName = "home".tr();
+      if (_selectedTab == 1) _selectedTabName = "addmedicine".tr();
+      if (_selectedTab == 2) _selectedTabName = "profile".tr();
+      if (_selectedTab == 3) _selectedTabName = "setting".tr();
+      
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+      leading:    Icon( size: 40,Icons.apps),
+        title: Text(_selectedTabName),
+      flexibleSpace: Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: <Color>[Colors.black, Colors.lightBlueAccent]),
+      ),
+    ),
+      ),
       body: _pages[_selectedTab],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedTab,
+        backgroundColor: Colors.lightBlueAccent,
         onTap: (index) => _changeTab(index),
-        selectedItemColor: Colors.orange,
-        unselectedItemColor: Colors.lightBlue,
+        selectedItemColor: Colors.orangeAccent,
+        unselectedItemColor: Colors.white,
         selectedFontSize: 15,
         unselectedFontSize: 15,
-        type: BottomNavigationBarType.fixed,
+         type: BottomNavigationBarType.fixed,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "home".tr(), backgroundColor: Colors.grey),
-          BottomNavigationBarItem(icon: Icon(Icons.add_circle_outline_rounded), label: "addmedicine".tr()),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: "home".tr(),
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.add_circle_outline_rounded),
+              label: "addmedicine".tr()),
           BottomNavigationBarItem(
               icon: Icon(Icons.person_2_rounded), label: "profile".tr()),
           BottomNavigationBarItem(
               icon: Icon(Icons.settings), label: "setting".tr()),
         ],
-        
       ),
     );
   }
