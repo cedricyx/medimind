@@ -14,12 +14,20 @@
     "viewall" : "View All",
 
     "AddMedComment" : "---------------------------------Add Medicine Menu ------------------------------",
-    "name" : "Name",
+    "medname" : "Name",
     "dosage" : "Dosage",
     "time" : "Time",
     "duration" : "Duration",
     "visualaids" : "Visual Aids",
-
+    "visualaidsDesc": "Support Video for now.",
+    "nameDesc": "Add the Name of your Medication.",
+    "timeDesc": "Enter what Time you need to take your Medication.",
+    "dosageDesc": "Enter the Dosage of your Medication.",
+    "durationDesc": "Select the Number of Days you need to take this Medication",
+    "enterName": "Enter Name",
+    "durationDay": "days",
+    "testnotificationDesc": "Test out the local notification",
+    
     "profileComment" : "---------------------------------Profile Menu ------------------------------",
     "firstname": "First Name",
     "lastname": "Last Name",
