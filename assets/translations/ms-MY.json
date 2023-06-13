@@ -7,6 +7,7 @@
     "profile" : "Profile",  
     "setting" : "Setting",  
     "done" : "Done",
+    "notificationBody": "Time to take your Medication!",
 
     "HomeComment" : "---------------------------------Home Menu ------------------------------",
     "today" : "Today's Medicine",
@@ -14,11 +15,17 @@
     "viewall" : "View All",
 
     "AddMedComment" : "---------------------------------Add Medicine Menu ------------------------------",
-    "name" : "Name",
+    "medname" : "Name",
     "dosage" : "DosageCalendar",
     "time" : "Time",
     "duration" : "Duration",
     "visualaids" : "Visual Aids",
+    "nameDesc": "Add the name of your Medication.",
+    "timeDesc": "Enter what Time you need to take your Medication.",
+    "dosageDesc": "Enter the Dosage of your Medication.",
+    "enterName": "Enter Name",
+    "testnotificationDesc": "Test out the local notification",
+
 
     "profileComment" : "---------------------------------Profile Menu ------------------------------",
     "firstname": "First Name",

@@ -8,6 +8,7 @@
     "profile" : "我的",  
     "setting" : "设置",  
     "done" : "完毕",
+    "notificationBody": "是时候吃药了！",
 
     "HomeComment" : "---------------------------------Home Menu ------------------------------",
     "today" : "今天的药",
@@ -20,8 +21,16 @@
     "time" : "时间",
     "duration" : "期间",
     "visualaids" : "视觉辅助",
-    "notificationBody" : "该吃药了!",
-
+    "visualaidsDesc": "目前只支持视频",
+    "nameDesc": "添加您的药物名称",
+    "timeDesc": "添加您需要吃药的时间",
+    "dosageDesc": "添加您的药物剂量",
+    "durationDesc": "选择您需要服用此药物的天数",
+    "enterName": "添加药名",
+    "durationDay": "天",
+    "testnotificationDesc": "测试通知",
+    "NoVisualAids": "请选择视觉辅助",
+    
     "profileComment" : "---------------------------------Profile Menu ------------------------------",
     "firstname": "名",
     "lastname": "姓",

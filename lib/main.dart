@@ -6,9 +6,12 @@ import 'package:medimind/pages/profile.dart';
 import 'package:medimind/pages/setting.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:http/http.dart' as http;
+import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
   await EasyLocalization.ensureInitialized();
   // Always initialize Awesome Notifications
   await NotificationController.initializeLocalNotifications();
@@ -154,7 +157,7 @@ class NotificationController {
               channelKey: 'alerts',
               channelName: 'Alerts',
               channelDescription: 'Notification tests as alerts',
-              playSound: true,                                                             
+              playSound: true,
               onlyAlertOnce: true,
               groupAlertBehavior: GroupAlertBehavior.Children,
               importance: NotificationImportance.High,
@@ -289,13 +292,13 @@ class NotificationController {
           id: -1, // -1 is replaced by a random number
           channelKey: 'alerts',
           title: 'Medimind',
-          body: tr('notificationBody'),
+          body: 'notificationBody'.tr(),
           bigPicture: 'asset://assets/images/take_medicine.png',
           largeIcon: 'asset://assets/images/grandmother.png',
           //'asset://assets/images/balloons-in-sky.jpg',
           notificationLayout: NotificationLayout.BigPicture,
           payload: {'notificationId': '1234567890'}),
-    /*actionButtons: [
+      /*actionButtons: [
           NotificationActionButton(key: 'REDIRECT', label: 'Redirect'),
           NotificationActionButton(
               key: 'REPLY',
@@ -308,7 +311,8 @@ class NotificationController {
               label: 'Dismiss',
               actionType: ActionType.DismissAction,
               isDangerousOption: true)
-        ]*/);
+        ]*/
+    );
   }
 
   static Future<void> scheduleNewNotification() async {

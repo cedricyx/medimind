@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "969375254664",
+    "project_id": "medimind-501a9",
+    "storage_bucket": "medimind-501a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969375254664:android:7b77c0ae8943a4c6ce773d",
+        "android_client_info": {
+          "package_name": "com.example.medimind"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969375254664-58rdq15sjolti5u6motseuo5okglj5l8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByEUcfSTQkcTu0_GICxfmDhyLTWWo-mIE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "969375254664-58rdq15sjolti5u6motseuo5okglj5l8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

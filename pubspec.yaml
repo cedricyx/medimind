@@ -9,11 +9,15 @@ environment:
 dependencies:
   flutter_native_splash: ^2.2.19
   easy_localization: ^3.0.1
+  image_picker: ^0.8.8
+  video_player: ^2.6.1
   calendar_timeline: ^1.1.2
   awesome_notifications: ^0.7.4+1
   http: ^0.13.6
   flutter:
     sdk: flutter
+  firebase_core: ^2.13.1
+  cloud_firestore: ^4.8.0
     
 
 dev_dependencies:
