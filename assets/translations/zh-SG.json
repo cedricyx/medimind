@@ -14,6 +14,8 @@
     "today" : "今天的药",
     "calendar" : "日历",
     "viewall" : "查看全部",
+    "emptyVisualAids" : "没有视觉辅助",
+
 
     "AddMedComment" : "---------------------------------Add Medicine Menu ------------------------------",
     "medname" : "药名",
@@ -30,7 +32,12 @@
     "durationDay": "天",
     "testnotificationDesc": "测试通知",
     "NoVisualAids": "请选择视觉辅助",
-    
+    "saveMedicine": "您已成功添加药物!",
+    "updateMedicine": "您已成功更新药物!",
+    "deleteMedicine": "您已成功删除药物!",   
+    "save": "添加",
+
+
     "profileComment" : "---------------------------------Profile Menu ------------------------------",
     "firstname": "名",
     "lastname": "姓",

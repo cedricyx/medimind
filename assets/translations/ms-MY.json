@@ -13,20 +13,32 @@
     "today" : "Today's Medicine",
     "calendar" : "Calendar",
     "viewall" : "View All",
+    "emptyVisualAids" : "No Visual Aids",
 
     "AddMedComment" : "---------------------------------Add Medicine Menu ------------------------------",
     "medname" : "Name",
-    "dosage" : "DosageCalendar",
+    "dosage" : "Dosage",
     "time" : "Time",
     "duration" : "Duration",
     "visualaids" : "Visual Aids",
-    "nameDesc": "Add the name of your Medication.",
+    "visualaidsDesc": "Support Video for now.",
+    "nameDesc": "Add the Name of your Medication.",
     "timeDesc": "Enter what Time you need to take your Medication.",
     "dosageDesc": "Enter the Dosage of your Medication.",
+    "durationDesc": "Select the Number of Days you need to take this Medication",
     "enterName": "Enter Name",
+    "durationDay": "days",
     "testnotificationDesc": "Test out the local notification",
+    "NoVisualAids": "Please select a visual aid.",
+    "saveMedicine": "You have successfully added a medicine!",
+    "updateMedicine": "You have successfully update the medicine!",
+    "deleteMedicine": "You have successfully deleted the medicine!",
+    "save": "Save",
+    
+    
+    
 
-
+    
     "profileComment" : "---------------------------------Profile Menu ------------------------------",
     "firstname": "First Name",
     "lastname": "Last Name",
@@ -38,7 +50,7 @@
     "language": "Language",
     "english" : "English" ,
     "chinese" : "Chinese" ,
-    "languageDesc" : "Support languges such as English, Chinese and Malay",
+    "languageDesc" : "Support English, Chinese, Malay, etc",
     "notification": "Notification",
     "notificationDesc": "Support sound and vibration",
     "sound": "Sound",

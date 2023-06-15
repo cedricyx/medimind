@@ -13,6 +13,7 @@
     "today" : "Today's Medicine",
     "calendar" : "Calendar",
     "viewall" : "View All",
+    "emptyVisualAids" : "No Visual Aids",
 
     "AddMedComment" : "---------------------------------Add Medicine Menu ------------------------------",
     "medname" : "Name",
@@ -29,6 +30,13 @@
     "durationDay": "days",
     "testnotificationDesc": "Test out the local notification",
     "NoVisualAids": "Please select a visual aid.",
+    "saveMedicine": "You have successfully added a medicine!",
+    "updateMedicine": "You have successfully update the medicine!",
+    "deleteMedicine": "You have successfully deleted the medicine!",
+    "save": "Save",
+    
+    
+    
 
     
     "profileComment" : "---------------------------------Profile Menu ------------------------------",
