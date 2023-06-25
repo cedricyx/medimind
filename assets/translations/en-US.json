@@ -33,9 +33,7 @@
     "saveMedicine": "You have successfully added a medicine!",
     "updateMedicine": "You have successfully update the medicine!",
     "deleteMedicine": "You have successfully deleted the medicine!",
-    "save": "Save",
-    
-    
+    "save": "Save",  
     
 
     
@@ -56,7 +54,8 @@
     "settingComment" : "---------------------------------Setting Menu ------------------------------",
     "language": "Language",
     "english" : "English" ,
-    "chinese" : "Chinese" ,
+    "chinese" : "中文" ,
+    "malay" : "Melayu" ,
     "languageDesc" : "Support English, Chinese, Malay, etc",
     "notification": "Notification",
     "notificationDesc": "Support sound and vibration",

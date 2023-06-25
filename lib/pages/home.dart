@@ -218,32 +218,47 @@ class _HomeState extends State<Home> {
                                                 IconButton(
                                                     iconSize: 40,
                                                     onPressed: () {},
-                                                    icon: new Image.asset(
-                                                        Constant.dawnImg)),
+                                                    icon: Tooltip(
+                                                      message: "5am",
+                                                      child: new Image.asset(
+                                                          Constant.dawnImg),
+                                                    )),
                                               if (documentSnapshot["morning"])
                                                 IconButton(
                                                     iconSize: 40,
                                                     onPressed: () {},
-                                                    icon: new Image.asset(
-                                                        'assets/images/morning.png')),
+                                                    icon: Tooltip(
+                                                      message: "10am",
+                                                      child: new Image.asset(
+                                                          'assets/images/morning.png'),
+                                                    )),
                                               if (documentSnapshot["afternoon"])
                                                 IconButton(
                                                     iconSize: 40,
                                                     onPressed: () {},
-                                                    icon: new Image.asset(
-                                                        'assets/images/afternoon.png')),
+                                                    icon: Tooltip(
+                                                      message: "3pm",
+                                                      child: new Image.asset(
+                                                          'assets/images/afternoon.png'),
+                                                    )),
                                               if (documentSnapshot["evening"])
                                                 IconButton(
                                                     iconSize: 40,
                                                     onPressed: () {},
-                                                    icon: new Image.asset(
-                                                        'assets/images/evening.png')),
+                                                    icon: Tooltip(
+                                                      message: "7pm",
+                                                      child: new Image.asset(
+                                                          'assets/images/evening.png'),
+                                                    )),
                                               if (documentSnapshot["night"])
                                                 IconButton(
                                                     iconSize: 40,
                                                     onPressed: () {},
-                                                    icon: new Image.asset(
-                                                        'assets/images/night.png')),
+                                                    icon: Tooltip(
+                                                      message: "10pm",
+                                                      child: new Image.asset(
+                                                          'assets/images/night.png'),
+                                                    )),
                                             ]),
                                         // No of pills
                                         Row(

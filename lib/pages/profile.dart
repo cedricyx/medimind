@@ -72,7 +72,7 @@ class _ProfileState extends State<Profile> {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(20.0),
-                      topRight: Radius.circular(100.0),
+                      topRight: Radius.circular(20.0),
                     ),
                     gradient: LinearGradient(
                         begin: Alignment.topCenter,
