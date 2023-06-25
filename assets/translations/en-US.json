@@ -40,11 +40,18 @@
 
     
     "profileComment" : "---------------------------------Profile Menu ------------------------------",
-    "firstname": "First Name",
+    "profilename": "Name",
+    "profilenamedesc": "Enter your Name.",
+    "enterprofilename": "Enter Name.",
     "lastname": "Last Name",
     "email" : "Email" ,
+    "profileemaildesc": "Enter your Email.",
+    "enterprofileemail": "Enter Email.",
     "mobile" : "Mobile Number" ,
+    "profilemobiledesc": "Enter your Mobile Number.",
+    "enterprofilemobile": "Enter Mobile Number.",
     "editprofile" : "Edit Profile" ,
+    "saveProfile" : "You have successfully saved your new profile!",
 
     "settingComment" : "---------------------------------Setting Menu ------------------------------",
     "language": "Language",

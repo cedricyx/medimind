@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:calendar_timeline/calendar_timeline.dart';
@@ -21,6 +23,26 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
+    DocumentReference docref = FirebaseFirestore.instance.doc("medimind/999");
+    docref.get().then((DocumentSnapshot documentSnapshot) {
+      if (documentSnapshot.exists) {
+        //Existing
+
+        setState(() {
+          Constant.profileName = documentSnapshot["profileName"];
+          Constant.profileEmail = documentSnapshot["profileEmail"];
+
+          // _profileMobileController.text = documentSnapshot["profileMobile"];
+          if (documentSnapshot["profileImage"] != '') {
+            // _profilePicFile = File(documentSnapshot["profileImage"]);
+            Constant.profileAvatarPath = documentSnapshot["profileImage"];
+          }
+        });
+      } else {
+        //New
+      }
+    });
+
     _resetSelectedDate();
     formattedDate = DateFormat('yyyy-MM-dd').format(_selectedDate);
   }
@@ -45,11 +67,12 @@ class _HomeState extends State<Home> {
             ),
             child: ListTile(
               leading: CircleAvatar(
-                backgroundImage: AssetImage('assets/images/grandmother.png'),
+                backgroundImage:                    
+                    Constant.profileAvatarPath==''?AssetImage('assets/images/defaultprofile.png'):Image.file(File(Constant.profileAvatarPath)).image,
                 radius: 35,
               ),
               title: Text(
-                'Grandmother',
+                Constant.profileName,
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
@@ -58,7 +81,7 @@ class _HomeState extends State<Home> {
                   color: Colors.black,
                 ),
               ),
-              subtitle: Text('+65 9876 5432'),
+              subtitle: Text(Constant.profileEmail),
               trailing: Icon(Icons.more_vert),
             ),
           ),
