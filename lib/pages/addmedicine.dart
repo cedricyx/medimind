@@ -170,28 +170,43 @@ class _AddMedicineState extends State<AddMedicine> {
                                     IconButton(
                                         iconSize: 40,
                                         onPressed: () {},
-                                        icon: new Image.asset(
-                                            'assets/images/dawn.png')),
+                                        icon: Tooltip(
+                                          message: "5am",
+                                          child: new Image.asset(
+                                              'assets/images/dawn.png'),
+                                        )),
                                     IconButton(
                                         iconSize: 40,
                                         onPressed: () {},
-                                        icon: new Image.asset(
-                                            'assets/images/morning.png')),
+                                        icon: Tooltip(
+                                          message: "10am",
+                                          child: new Image.asset(
+                                              'assets/images/morning.png'),
+                                        )),
                                     IconButton(
                                         iconSize: 40,
                                         onPressed: () {},
-                                        icon: new Image.asset(
-                                            'assets/images/afternoon.png')),
+                                        icon: Tooltip(
+                                          message: "3pm",
+                                          child: new Image.asset(
+                                              'assets/images/afternoon.png'),
+                                        )),
                                     IconButton(
                                         iconSize: 40,
                                         onPressed: () {},
-                                        icon: new Image.asset(
-                                            'assets/images/evening.png')),
+                                        icon: Tooltip(
+                                          message: "7pm",
+                                          child: new Image.asset(
+                                              'assets/images/evening.png'),
+                                        )),
                                     IconButton(
                                         iconSize: 40,
                                         onPressed: () {},
-                                        icon: new Image.asset(
-                                            'assets/images/night.png')),
+                                        icon: Tooltip(
+                                          message: "10pm",
+                                          child: new Image.asset(
+                                              'assets/images/night.png'),
+                                        )),
                                   ]),
                               Row(
                                 mainAxisAlignment:
