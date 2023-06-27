@@ -39,10 +39,10 @@
 
 
     "profileComment" : "---------------------------------Profile Menu ------------------------------",
-    "profilename": "名子",
+    "profilename": "名字",
     "profilenamedesc": "请添加您的名字",
     "enterprofilename": "添加名字",
-    "lastname": "Last Name",
+    "lastname": "姓",
     "email" : "电子邮件" ,
     "profileemaildesc": "请添加您的电子邮件",
     "enterprofileemail": "添加电子邮件",
