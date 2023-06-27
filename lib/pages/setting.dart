@@ -3,8 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flag/flag.dart';
 
-enum Languages { english, chinese, malay }
+enum Languages {
+  english,
+  chinese,
+  malay,
+  french,
+}
 
 // 2.
 Languages? _languages = Languages.english;
@@ -26,6 +32,8 @@ class _SettingState extends State<Setting> {
       _languages = Languages.chinese;
     else if (locale?.languageCode == "ms")
       _languages = Languages.malay;
+    else if (locale?.languageCode == "fr")
+      _languages = Languages.french;
     else
       _languages = Languages.english;
     return Padding(
@@ -85,16 +93,82 @@ class _SettingState extends State<Setting> {
                                 value: _languages,
                                 items: [
                                   DropdownMenuItem<Languages>(
-                                    child: Text('english'.tr()),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Flag.fromCode(
+                                          FlagsCode.SG,
+                                          height: 25,
+                                          width: 25,
+                                          fit: BoxFit.fill,
+                                        ),
+                                        Padding(padding: EdgeInsets.all(5)),
+                                        SizedBox(
+                                            width: 100,
+                                            child: Text('english'.tr())),
+                                      ],
+                                    ),
                                     value: Languages.english,
                                   ),
                                   DropdownMenuItem<Languages>(
-                                    child: Text('chinese'.tr()),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Flag.fromCode(
+                                          FlagsCode.SG,
+                                          height: 25,
+                                          width: 25,
+                                          fit: BoxFit.fill,
+                                        ),
+                                        Padding(padding: EdgeInsets.all(5)),
+                                        SizedBox(
+                                            width: 100,
+                                            child: Text(
+                                              'chinese'.tr(),
+                                            )),
+                                      ],
+                                    ),
                                     value: Languages.chinese,
                                   ),
                                   DropdownMenuItem<Languages>(
-                                    child: Text('malay'.tr()),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Flag.fromCode(
+                                          FlagsCode.SG,
+                                          height: 25,
+                                          width: 25,
+                                          fit: BoxFit.fill,
+                                        ),
+                                        Padding(padding: EdgeInsets.all(5)),
+                                        SizedBox(
+                                            width: 100,
+                                            child: Text('malay'.tr())),
+                                      ],
+                                    ),
                                     value: Languages.malay,
+                                  ),
+                                  DropdownMenuItem<Languages>(
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Flag.fromCode(
+                                          FlagsCode.FR,
+                                          height: 25,
+                                          width: 25,
+                                          fit: BoxFit.fill,
+                                        ),
+                                        Padding(padding: EdgeInsets.all(5)),
+                                        SizedBox(
+                                            width: 100,
+                                            child: Text('french'.tr())),
+                                      ],
+                                    ),
+                                    value: Languages.french,
                                   ),
                                 ],
                                 onChanged: (Languages? value) {
@@ -109,6 +183,9 @@ class _SettingState extends State<Setting> {
                                         break;
                                       case Languages.malay:
                                         context.setLocale(Locale('ms', 'MY'));
+                                        break;
+                                      case Languages.french:
+                                        context.setLocale(Locale('fr', 'FR'));
                                         break;
                                     }
                                   });

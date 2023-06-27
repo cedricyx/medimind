@@ -19,6 +19,7 @@ dependencies:
   firebase_core: ^2.13.1
   cloud_firestore: ^4.8.0
   editable_image: ^2.0.0
+  flag: ^7.0.0
     
 
 dev_dependencies:

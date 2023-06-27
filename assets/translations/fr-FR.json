@@ -1,0 +1,68 @@
+{
+    "title" : "Medimind",
+
+    "navComment" : "-------------------------Common and Navigation Menu ------------------------------",
+    "home" : "Maison",
+    "addmedicine" : "Ajouter un médicament ",
+    "profile" : "Le profil",  
+    "setting" : "Paramètres",  
+    "done" : "Fini",
+    "notificationBody": "Le temps de prendre vos médicaments!",
+
+    "HomeComment" : "---------------------------------Home Menu ------------------------------",
+    "today" : "Médecine d'aujourd'hui",
+    "calendar" : "Calendrier",
+    "viewall" : "Voir Tout",
+    "emptyVisualAids" : "Pas d'aides visuelles",
+
+    "AddMedComment" : "---------------------------------Add Medicine Menu ------------------------------",
+    "medname" : "Le nom",
+    "dosage" : "Dosage",
+    "time" : "Temps",
+    "duration" : "Durée",
+    "visualaids" : "Aides visuelles",
+    "visualaidsDesc": "Ne prends en charge que la vidéo pour ow. ",
+    "nameDesc": "Ajoutez le nom de votre médicament.",
+    "timeDesc": "Entrez l'heure à laquelle vous devez prendre vos médicaments.",
+    "dosageDesc": "Saisissez la posologie de votre médicament.",
+    "durationDesc": "Sélectionnez le nombre de jours dont vous avez besoin pour prendre ce médicament",
+    "enterName": "Entrez le nom",
+    "durationDay": "jours",
+    "testnotificationDesc": "Testez la notification locale",
+    "NoVisualAids": "Veuillez sélectionner une aide visuelle.",
+    "saveMedicine": "Vous avez ajouté un médicament avec succès!",
+    "updateMedicine": "Vous avez réussi à mettre à jour le médicament !",
+    "deleteMedicine": "Vous avez supprimé le médicament avec succès !",
+    "save": "Sauvegarder",  
+    
+
+    
+    "profileComment" : "---------------------------------Profile Menu ------------------------------",
+    "profilename": "Le nom",
+    "profilenamedesc": "Entrez votre nom.",
+    "enterprofilename": "Entrez le nom.",
+    "lastname": "Nom de famille",
+    "email" : "E-mail" ,
+    "profileemaildesc": "Entrer votre E-mail.",
+    "enterprofileemail": "Entrez E-mail.",
+    "mobile" : "Numéro de portable" ,
+    "profilemobiledesc": "Entrez votre numéro de mobile.",
+    "enterprofilemobile": "Entrez le numéro de portable.",
+    "editprofile" : "Editer le profil" ,
+    "saveProfile" : "Vous avez enregistré avec succès votre nouveau profil !",
+
+    "settingComment" : "---------------------------------Setting Menu ------------------------------",
+    "language": "Langue",
+    "english" : "English" ,
+    "chinese" : "中文" ,
+    "malay" : "Melayu" ,
+    "french": "Français",
+    "languageDesc" : "Soutenir English, 中文, Melayu, français, etc.",
+    "notification": "Notification",
+    "notificationDesc": "Soutenir le son et les vibrations",
+    "sound": "son",
+    "vibration": "Vibration",  
+
+    "endOfList": "--------------------------------------endOfList------------------------------------ "
+ 
+}

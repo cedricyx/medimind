@@ -39,9 +39,9 @@
 
 
     "profileComment" : "---------------------------------Profile Menu ------------------------------",
-    "profilename": "名子",
+    "profilename": "名字",
     "profilenamedesc": "请添加您的名字",
-    "enterprofilename": "添加名字",
+    "enterprofilename": "添加名c",
     "lastname": "Last Name",
     "email" : "电子邮件" ,
     "profileemaildesc": "请添加您的电子邮件",
@@ -57,7 +57,8 @@
     "english" : "English" ,
     "chinese" : "中文" ,
     "malay" : "Melayu" ,
-    "languageDesc" : "支持英文、中文、马来文等语言",
+    "french": "Français",
+    "languageDesc" : "支持English、中文、Melayu、Français等语言",
     "notification": "通知",
     "notificationDesc": "支持音量和振动",
     "sound": "音量",
