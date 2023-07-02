@@ -3,4 +3,5 @@ class Constant {
   static String profileAvatarPath = '';
   static String profileName = '';
   static String profileEmail = '';
+  static String bob ="";
 }

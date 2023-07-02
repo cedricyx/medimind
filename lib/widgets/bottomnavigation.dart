@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:medimind/pages/addmedicine.dart';
+import 'package:medimind/main.dart';
 import 'package:medimind/pages/home.dart';
 import 'package:medimind/pages/profile.dart';
 import 'package:medimind/pages/setting.dart';
@@ -11,8 +13,7 @@ class BottomNavigation extends StatefulWidget {
   const BottomNavigation({Key? key}) : super(key: key);
 
   @override
-  _BottomNavigationState createState() =>
-      _BottomNavigationState();
+  _BottomNavigationState createState() => _BottomNavigationState();
 }
 
 class _BottomNavigationState extends State {
@@ -50,6 +51,16 @@ class _BottomNavigationState extends State {
       appBar: AppBar(
         leading: Icon(size: 40, Icons.apps),
         title: Text(_selectedTabName),
+        actions: [
+          IconButton(
+            onPressed: () async {
+              await FirebaseAuth.instance.signOut();
+              Navigator.pushReplacementNamed(context, '/sign-in');
+            },
+            icon: Icon(Icons.logout_outlined),
+            iconSize: 35,
+          )
+        ],
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(

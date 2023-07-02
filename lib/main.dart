@@ -1,24 +1,38 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:medimind/pages/addmedicine.dart';
-import 'package:medimind/pages/home.dart';
-import 'package:medimind/pages/profile.dart';
-import 'package:medimind/pages/setting.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:medimind/widgets/bottomnavigation.dart';
 import 'package:medimind/widgets/notification.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_ui_auth/firebase_ui_auth.dart';
+
+import 'firebase_options.dart';
+import 'package:firebase_ui_auth/src/providers/email_auth_provider.dart'
+    as email_auth;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-
   await EasyLocalization.ensureInitialized();
   // Always initialize Awesome Notifications
   await NotificationController.initializeLocalNotifications();
+  // Initialising Firebaser Authernication
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  FirebaseUIAuth.configureProviders([email_auth.EmailAuthProvider()]);
 
   runApp(
     EasyLocalization(
-        supportedLocales: [Locale('en', 'US'), Locale('zh', 'SG'), Locale('ms', 'MY'), Locale('fr', 'FR'),],
+        supportedLocales: [
+          Locale('en', 'US'),
+          Locale('zh', 'SG'),
+          Locale('ta', 'IN'),
+          Locale('ms', 'MY'),
+          Locale('fr', 'FR'),
+          Locale('fi', 'FI'),
+          Locale('de', 'DE'),
+          Locale('it', 'IT'),
+          Locale('ja', 'JP'),
+          Locale('pt', 'PT'),
+        ],
         path:
             'assets/translations', // <-- change the path of the translation files
         fallbackLocale: Locale('en', 'US'),
@@ -27,6 +41,76 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
+  static final GlobalKey<NavigatorState> navigatorKey =
+      GlobalKey<NavigatorState>();
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
+        title: '2A3 PW 2023 Medimind',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        initialRoute: FirebaseAuth.instance.currentUser == null
+            ? '/sign-in'
+            : '/medimind',
+        routes: {
+          '/sign-in': (context) {
+            return SignInScreen(
+              headerBuilder: (context, constraints, _) {
+                return Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: AspectRatio(
+                    aspectRatio: 1,
+                    child: Image.asset("assets/images/logo.png"),
+                  ),
+                );
+              },
+              subtitleBuilder: (context, action) {
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 8),
+                  child: Text(
+                    style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
+                    action == AuthAction.signIn
+                        ? 'Welcome to Medimind! Please sign in to continue.'
+                        : 'Welcome to Medimind! Please create an account to continue',
+                  ),
+                );
+              },
+              footerBuilder: (context, _) {
+                return Padding(
+                  padding: EdgeInsets.only(top: 150),
+                  child: SizedBox(
+                    // height: 50,
+                    height: 70,
+                    child: Image.asset("assets/images/brand.png"),
+                  ),
+                );
+              },
+              actions: [
+                AuthStateChangeAction<SignedIn>((context, state) {
+                  Navigator.pushReplacementNamed(context, '/medimind');
+                }),
+              ],
+            );
+          },
+          '/medimind': (context) => BottomNavigation(),
+          '/profile': (context) {
+            return ProfileScreen(
+              actions: [
+                SignedOutAction((context) {
+                  Navigator.pushReplacementNamed(context, '/sign-in');
+                }),
+              ],
+            );
+          },
+        });
+  }
+}
+
+class MyApp_backup extends StatelessWidget {
   static final GlobalKey<NavigatorState> navigatorKey =
       GlobalKey<NavigatorState>();
   @override

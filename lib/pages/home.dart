@@ -6,6 +6,8 @@ import 'package:calendar_timeline/calendar_timeline.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:medimind/widgets/constants.dart';
 import 'package:medimind/widgets/videoplayer.dart';
+import 'package:firebase_ui_auth/firebase_ui_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -23,8 +25,11 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
-    DocumentReference docref = FirebaseFirestore.instance.doc("medimind/999");
-    docref.get().then((DocumentSnapshot documentSnapshot) {
+    String uid = FirebaseAuth.instance.currentUser!.uid;
+    String? useremail = FirebaseAuth.instance.currentUser!.email;
+    DocumentReference docref =
+        FirebaseFirestore.instance.doc("medimind/" + uid);
+    docref.get().then((DocumentSnapshot documentSnapshot) async {
       if (documentSnapshot.exists) {
         //Existing
 
@@ -39,7 +44,18 @@ class _HomeState extends State<Home> {
           }
         });
       } else {
-        //New
+        // New User
+        //1 - Create new DOC in firebase data
+        await _medimind.doc(uid).set({
+          "profileName": "",
+          "profileEmail": useremail,
+          "profileImage": "",
+        });
+        //2 Set State
+        
+        setState(() {
+            Constant.profileEmail = useremail!;
+        });
       }
     });
 
@@ -53,6 +69,8 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    final locale = EasyLocalization.of(context)?.locale;
+
     return Padding(
       padding: EdgeInsets.all(10.0),
       child: SafeArea(
@@ -67,8 +85,9 @@ class _HomeState extends State<Home> {
             ),
             child: ListTile(
               leading: CircleAvatar(
-                backgroundImage:                    
-                    Constant.profileAvatarPath==''?AssetImage('assets/images/defaultprofile.png'):Image.file(File(Constant.profileAvatarPath)).image,
+                backgroundImage: Constant.profileAvatarPath == ''
+                    ? AssetImage('assets/images/defaultprofile.png')
+                    : Image.file(File(Constant.profileAvatarPath)).image,
                 radius: 35,
               ),
               title: Text(
@@ -113,8 +132,10 @@ class _HomeState extends State<Home> {
                 activeDayColor: Colors.white,
                 activeBackgroundDayColor: Colors.redAccent[100],
                 dotsColor: const Color(0xFF333A47),
+
                 //selectableDayPredicate: (date) => date.day != 23,
                 locale: 'en',
+                // locale: locale?.languageCode,
               ),
             ),
           ),
@@ -140,7 +161,7 @@ class _HomeState extends State<Home> {
             height: 390,
             child: StreamBuilder(
                 stream: _medimind
-                    .doc("999")
+                    .doc(FirebaseAuth.instance.currentUser!.uid)
                     .collection("medicines")
                     .orderBy('medicineName')
                     .snapshots(),
@@ -286,7 +307,7 @@ class _HomeState extends State<Home> {
                                         iconSize: 30,
                                         onPressed: () async {
                                           await _medimind
-                                              .doc("999")
+                                              .doc(FirebaseAuth.instance.currentUser!.uid)
                                               .collection("medicines")
                                               .doc(documentSnapshot.id)
                                               .delete();

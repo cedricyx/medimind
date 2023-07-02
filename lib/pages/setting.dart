@@ -9,7 +9,13 @@ enum Languages {
   english,
   chinese,
   malay,
+  tamil,
   french,
+  finnish,
+  german,
+  italian,
+  japanese,
+  portugese,
 }
 
 // 2.
@@ -32,8 +38,20 @@ class _SettingState extends State<Setting> {
       _languages = Languages.chinese;
     else if (locale?.languageCode == "ms")
       _languages = Languages.malay;
+    else if (locale?.languageCode == "ta")
+      _languages = Languages.tamil;
     else if (locale?.languageCode == "fr")
       _languages = Languages.french;
+    else if (locale?.languageCode == "fi")
+      _languages = Languages.finnish;
+    else if (locale?.languageCode == "de")
+      _languages = Languages.german;
+    else if (locale?.languageCode == "it")
+      _languages = Languages.italian;
+    else if (locale?.languageCode == "ja")
+      _languages = Languages.japanese;
+    else if (locale?.languageCode == "pt")
+      _languages = Languages.portugese;
     else
       _languages = Languages.english;
     return Padding(
@@ -99,13 +117,14 @@ class _SettingState extends State<Setting> {
                                       children: [
                                         Flag.fromCode(
                                           FlagsCode.SG,
+                                         
                                           height: 25,
-                                          width: 25,
+                                          width: 30,
                                           fit: BoxFit.fill,
                                         ),
                                         Padding(padding: EdgeInsets.all(5)),
                                         SizedBox(
-                                            width: 100,
+                                            width: 125,
                                             child: Text('english'.tr())),
                                       ],
                                     ),
@@ -119,12 +138,12 @@ class _SettingState extends State<Setting> {
                                         Flag.fromCode(
                                           FlagsCode.SG,
                                           height: 25,
-                                          width: 25,
+                                          width: 30,
                                           fit: BoxFit.fill,
                                         ),
                                         Padding(padding: EdgeInsets.all(5)),
                                         SizedBox(
-                                            width: 100,
+                                            width: 125,
                                             child: Text(
                                               'chinese'.tr(),
                                             )),
@@ -140,12 +159,12 @@ class _SettingState extends State<Setting> {
                                         Flag.fromCode(
                                           FlagsCode.SG,
                                           height: 25,
-                                          width: 25,
+                                          width: 30,
                                           fit: BoxFit.fill,
                                         ),
                                         Padding(padding: EdgeInsets.all(5)),
                                         SizedBox(
-                                            width: 100,
+                                            width: 125,
                                             child: Text('malay'.tr())),
                                       ],
                                     ),
@@ -157,19 +176,137 @@ class _SettingState extends State<Setting> {
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
                                         Flag.fromCode(
-                                          FlagsCode.FR,
+                                          FlagsCode.SG,
                                           height: 25,
-                                          width: 25,
+                                          width: 30,
                                           fit: BoxFit.fill,
                                         ),
                                         Padding(padding: EdgeInsets.all(5)),
                                         SizedBox(
-                                            width: 100,
+                                            width: 125,
+                                            child: Text(
+                                              'tamil'.tr(),
+                                            )),
+                                      ],
+                                    ),
+                                    value: Languages.tamil,
+                                  ),
+                                  DropdownMenuItem<Languages>(
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Flag.fromCode(
+                                          FlagsCode.FI,
+                                          height: 25,
+                                          width: 30,
+                                          fit: BoxFit.fill,
+                                        ),
+                                        Padding(padding: EdgeInsets.all(5)),
+                                        SizedBox(
+                                            width: 125,
+                                            child: Text('finnish'.tr())),
+                                      ],
+                                    ),
+                                    value: Languages.finnish,
+                                  ),
+                                  
+                                  DropdownMenuItem<Languages>(
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Flag.fromCode(
+                                          FlagsCode.FR,
+                                          height: 25,
+                                          width: 30,
+                                          fit: BoxFit.fill,
+                                        ),
+                                        Padding(padding: EdgeInsets.all(5)),
+                                        SizedBox(
+                                            width: 125,
                                             child: Text('french'.tr())),
                                       ],
                                     ),
                                     value: Languages.french,
                                   ),
+                                  DropdownMenuItem<Languages>(
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Flag.fromCode(
+                                          FlagsCode.DE,
+                                          height: 25,
+                                          width: 30,
+                                          fit: BoxFit.fill,
+                                        ),
+                                        Padding(padding: EdgeInsets.all(5)),
+                                        SizedBox(
+                                            width: 125,
+                                            child: Text('german'.tr())),
+                                      ],
+                                    ),
+                                    value: Languages.german,
+                                  ),
+                                  DropdownMenuItem<Languages>(
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Flag.fromCode(
+                                          FlagsCode.IT,
+                                          height: 25,
+                                          width: 30,
+                                          fit: BoxFit.fill,
+                                        ),
+                                        Padding(padding: EdgeInsets.all(5)),
+                                        SizedBox(
+                                            width: 125,
+                                            child: Text('italian'.tr())),
+                                      ],
+                                    ),
+                                    value: Languages.italian,
+                                  ),
+                                  DropdownMenuItem<Languages>(
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Flag.fromCode(
+                                          FlagsCode.JP,
+                                          height: 25,
+                                          width: 30,
+                                          fit: BoxFit.fill,
+                                        ),
+                                        Padding(padding: EdgeInsets.all(5)),
+                                        SizedBox(
+                                            width: 125,
+                                            child: Text('japanese'.tr())),
+                                      ],
+                                    ),
+                                    value: Languages.japanese,
+                                  ),
+                                  DropdownMenuItem<Languages>(
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Flag.fromCode(
+                                          FlagsCode.PT,
+                                          height: 25,
+                                          width: 30,
+                                          fit: BoxFit.fill,
+                                        ),
+                                        Padding(padding: EdgeInsets.all(5)),
+                                        SizedBox(
+                                            width: 125,
+                                            child: Text('portugese'.tr())),
+                                      ],
+                                    ),
+                                    value: Languages.portugese,
+                                  ),
+                                  
                                 ],
                                 onChanged: (Languages? value) {
                                   setState(() {
@@ -184,8 +321,26 @@ class _SettingState extends State<Setting> {
                                       case Languages.malay:
                                         context.setLocale(Locale('ms', 'MY'));
                                         break;
+                                      case Languages.tamil:
+                                        context.setLocale(Locale('ta', 'IN'));
+                                        break;
                                       case Languages.french:
                                         context.setLocale(Locale('fr', 'FR'));
+                                        break;
+                                      case Languages.finnish:
+                                        context.setLocale(Locale('fi', 'FI'));
+                                        break;
+                                      case Languages.german:
+                                        context.setLocale(Locale('de', 'DE'));
+                                        break;
+                                      case Languages.italian:
+                                        context.setLocale(Locale('it', 'IT'));
+                                        break;
+                                      case Languages.japanese:
+                                        context.setLocale(Locale('ja', 'JP'));
+                                        break;
+                                      case Languages.portugese:
+                                        context.setLocale(Locale('pt', 'PT'));
                                         break;
                                     }
                                   });

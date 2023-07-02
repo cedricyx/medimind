@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:medimind/widgets/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:editable_image/editable_image.dart';
@@ -28,7 +29,8 @@ class _ProfileState extends State<Profile> {
   void initState() {
     super.initState();
     //Retrieving document from Firestore
-    DocumentReference docref = FirebaseFirestore.instance.doc("medimind/999");
+    DocumentReference docref = FirebaseFirestore.instance
+        .doc("medimind/" + FirebaseAuth.instance.currentUser!.uid);
     docref.get().then((DocumentSnapshot documentSnapshot) {
       if (documentSnapshot.exists) {
         //Existing
@@ -201,6 +203,7 @@ class _ProfileState extends State<Profile> {
                               SizedBox(
                                 width: 325,
                                 child: TextField(
+                                  enabled: false,
                                   controller: _profileEmailController,
                                   decoration: InputDecoration(
                                     labelText: 'enterprofileemail'.tr(),
@@ -290,7 +293,9 @@ class _ProfileState extends State<Profile> {
                                 : _profilePicFile!.path;
                             if (isNew) {
                             } else {
-                              await _medimind.doc("999").update({
+                              await _medimind
+                                  .doc(FirebaseAuth.instance.currentUser!.uid)
+                                  .update({
                                 "profileName": _profileNameController.text,
                                 "profileEmail": _profileEmailController.text,
                                 "profileMobile": _profileMobileController.text,

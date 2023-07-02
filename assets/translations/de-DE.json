@@ -2,10 +2,10 @@
     "title" : "Medimind",
 
     "navComment" : "-------------------------Common and Navigation Menu ------------------------------",
-    "home" : "Home",
-    "addmedicine" : "Add Medicine",
-    "profile" : "Profile",  
-    "setting" : "Setting",  
+    "home" : "Heim",
+    "addmedicine" : "Medizin hinzufügen",
+    "profile" : "Profil",  
+    "setting" : "Einstellung",  
     "done" : "Done",
     "notificationBody": "Time to take your Medication!",
 

@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:medimind/main.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -558,7 +559,7 @@ class _AddMedicineState extends State<AddMedicine> {
                               medDuration = "5000";
                             }
                             await _medimind
-                                .doc("999")
+                                .doc(FirebaseAuth.instance.currentUser!.uid)
                                 .collection("medicines")
                                 .add({
                               "medicineName": _medNameController.text,
