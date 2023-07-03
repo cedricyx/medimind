@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flag/flag.dart';
+import 'package:medimind/widgets/notification.dart';
 
 enum Languages {
   english,
@@ -29,8 +30,8 @@ class Setting extends StatefulWidget {
 }
 
 class _SettingState extends State<Setting> {
-  bool vibrationCheckbox = false;
-  bool soundCheckbox = false;
+  bool vibrationCheckbox = true;
+  bool soundCheckbox = true;
   @override
   Widget build(BuildContext context) {
     final locale = EasyLocalization.of(context)?.locale;
@@ -403,7 +404,55 @@ class _SettingState extends State<Setting> {
                             ],
                           ),
                         ),
-                      ],
+// ********************* Start of Notification Demo *********************
+
+                      Card(
+                        elevation: 2, // the size of the shadow
+                        shadowColor: Colors.black, // shadow color
+
+                        child: SizedBox(
+                          width: 365,
+                          child: Column(
+                            children: [
+                              ListTile(
+                                  leading: Icon(
+                                      size: 55,
+                                      color: Colors.blue,
+                                      Icons.notifications_active),
+                                  title: Text(
+                                    'notification'.tr(),
+                                    textAlign: TextAlign.left,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 18,
+                                      letterSpacing: 0.27,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  subtitle: Text('testnotificationDesc'.tr()),
+                                  trailing: IconButton(
+                                    iconSize: 40,
+                                    color: Colors.orange,
+                                    onPressed: () {
+                                      if (soundCheckbox == false){
+                                        NotificationController
+                                          .createNewNotification('nosound');
+                                      } else if (vibrationCheckbox == false){
+                                        NotificationController
+                                          .createNewNotification('novibration');
+                                      } else {
+                                        NotificationController
+                                          .createNewNotification(locale!.languageCode);
+                                      }                                     
+                                    },
+                                    icon: Icon(
+                                      Icons.ads_click_sharp,
+                                    ),
+                                  )),
+                            ],
+                          ),
+                        ),
+                      ),                      ],
                     ),
                   ),
                 ],

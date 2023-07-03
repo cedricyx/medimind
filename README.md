@@ -21,3 +21,5 @@ Make elderly's lives easier
 Simplify medication management through easy and simple UI using visual aids 
 
 Reduce anxiety and stress about when and how to take medicine
+
+run this code when you want to change app icon: flutter pub run flutter_launcher_icons

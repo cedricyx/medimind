@@ -101,7 +101,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
               subtitle: Text(Constant.profileEmail),
-              trailing: Icon(Icons.more_vert),
+              
             ),
           ),
           //Calender

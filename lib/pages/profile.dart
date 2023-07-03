@@ -103,7 +103,7 @@ class _ProfileState extends State<Profile> {
                             : null,
 
                         // Define the size of EditableImage.
-                        size: 135.0,
+                        size: 120.0,
 
                         // Define the Theme of image picker.
                         imagePickerTheme: ThemeData(

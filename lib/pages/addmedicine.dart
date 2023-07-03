@@ -495,47 +495,7 @@ class _AddMedicineState extends State<AddMedicine> {
                         ),
                       ),
 
-                      // ********************* Start of Notification Demo *********************
-
-                      Card(
-                        elevation: 2, // the size of the shadow
-                        shadowColor: Colors.black, // shadow color
-
-                        child: SizedBox(
-                          width: 365,
-                          child: Column(
-                            children: [
-                              ListTile(
-                                  leading: Icon(
-                                      size: 40,
-                                      color: Colors.blue,
-                                      Icons.notifications_active),
-                                  title: Text(
-                                    'notification'.tr(),
-                                    textAlign: TextAlign.left,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 18,
-                                      letterSpacing: 0.27,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                  subtitle: Text('testnotificationDesc'.tr()),
-                                  trailing: IconButton(
-                                    iconSize: 40,
-                                    color: Colors.orange,
-                                    onPressed: () {
-                                      NotificationController
-                                          .createNewNotification();
-                                    },
-                                    icon: Icon(
-                                      Icons.ads_click_sharp,
-                                    ),
-                                  )),
-                            ],
-                          ),
-                        ),
-                      ),
+                      
                       Padding(
                         padding: EdgeInsets.all(8.0),
                       ),
